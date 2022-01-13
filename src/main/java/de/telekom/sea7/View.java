@@ -7,8 +7,8 @@ public class View extends BaseObject {
 	
 	private Model model;
 	
-	public View(int id, Object parent, Model model) {
-		super(id,parent);
+	public View(Object parent, Model model) {
+		super(parent);
 		this.model = model;
 	}
 	

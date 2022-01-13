@@ -11,8 +11,8 @@ public class Model extends BaseObject {
 	private String verwendungszweck;
 	private LocalDateTime datum;
 	
-	public Model(int id, Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
-		super(id, parent);
+	public Model(Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
+		super(parent);
 		this.betrag = betrag;
 		this.empfaenger = empfaenger;
 		this.iban = iban;
