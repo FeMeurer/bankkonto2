@@ -2,7 +2,7 @@ package de.telekom.sea7;
 
 import java.time.*;
 
-public class Model {
+public class Model extends BaseObject {
 	
 	private float betrag;
 	private String empfaenger;
@@ -11,7 +11,8 @@ public class Model {
 	private String verwendungszweck;
 	private LocalDateTime datum;
 	
-	public Model(float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
+	public Model(int id, Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
+		super(id, parent);
 		this.betrag = betrag;
 		this.empfaenger = empfaenger;
 		this.iban = iban;

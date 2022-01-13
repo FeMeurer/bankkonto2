@@ -3,11 +3,12 @@ package de.telekom.sea7;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class View {
+public class View extends BaseObject {
 	
 	private Model model;
 	
-	public View(Model model) {
+	public View(int id, Object parent, Model model) {
+		super(id,parent);
 		this.model = model;
 	}
 	
@@ -22,7 +23,8 @@ public class View {
 				case "transfer":	break;
 				case "show":		show();
 									break;
-				case "exit":		System.out.println();
+				case "exit":		scanner.close();
+									System.out.println();
 									System.out.println("Programm will be closed...");
 									System.out.println();
 									break;
