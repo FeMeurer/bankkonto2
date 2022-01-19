@@ -1,8 +1,8 @@
-package de.telekom.sea7;
+package de.telekom.sea7.Model;
 
 import java.time.*;
 
-public class Model extends BaseObject {
+public class Transaction extends BaseObject {
 	
 	private float betrag;
 	private String empfaenger;
@@ -11,7 +11,7 @@ public class Model extends BaseObject {
 	private String verwendungszweck;
 	private LocalDateTime datum;
 	
-	public Model(Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
+	public Transaction(Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
 		super(parent);
 		this.betrag = betrag;
 		this.empfaenger = empfaenger;

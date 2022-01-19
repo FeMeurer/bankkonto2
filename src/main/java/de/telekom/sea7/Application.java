@@ -1,6 +1,8 @@
 package de.telekom.sea7;
 
-import java.time.*;
+import de.telekom.sea7.Model.BaseObject;
+import de.telekom.sea7.Model.Transactions;
+import de.telekom.sea7.View.TransactionsView;
 
 public class Application extends BaseObject {
 	
@@ -9,10 +11,9 @@ public class Application extends BaseObject {
 	}
 	
 	public void run() {
-		LocalDateTime datum = LocalDateTime.now(); 
-		Model model = new Model(this, 50.0f,"Max Mustermann","DE74219866551234567890","BICBICBIC","Hier hast du deine Kohle du Schuft!", datum);
+		Transactions model = new Transactions();
 		
-		View view = new View(this, model);
+		TransactionsView view = new TransactionsView(this, model);
 		view.menu();	
 	}
 }
