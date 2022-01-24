@@ -1,72 +1,31 @@
 package de.telekom.sea7.Model;
 
-import java.time.*;
+import java.time.LocalDateTime;
 
-public class Transaction extends BaseObject {
-	
-	private float betrag;
-	private String empfaenger;
-	private String iban;
-	private String bic;
-	private String verwendungszweck;
-	private LocalDateTime datum;
-	
-	public Transaction(Object parent, float betrag, String empfaenger, String iban, String bic, String verwendungszweck, LocalDateTime datum) {
-		super(parent);
-		this.betrag = betrag;
-		this.empfaenger = empfaenger;
-		this.iban = iban;
-		this.bic = bic;
-		this.verwendungszweck = verwendungszweck;
-		this.datum = datum;
-	}
+public interface Transaction {
 
-	public LocalDateTime getDatum() {
-		return datum;
-	}
+	LocalDateTime getDatum();
 
-	public void setDatum(LocalDateTime datum) {
-		this.datum = datum;
-	}
+	void setDatum(LocalDateTime datum);
 
-	public float getBetrag() {
-		return betrag;
-	}
+	float getBetrag();
 
-	public void setBetrag(float betrag) {
-		this.betrag = betrag;
-	}
+	void setBetrag(float betrag);
 
-	public String getEmpfaenger() {
-		return empfaenger;
-	}
+	String getEmpfaenger();
 
-	public void setEmpfaenger(String empfaenger) {
-		this.empfaenger = empfaenger;
-	}
+	void setEmpfaenger(String empfaenger);
 
-	public String getIban() {
-		return iban;
-	}
+	String getIban();
 
-	public void setIban(String iban) {
-		this.iban = iban;
-	}
+	void setIban(String iban);
 
-	public String getBic() {
-		return bic;
-	}
+	String getBic();
 
-	public void setBic(String bic) {
-		this.bic = bic;
-	}
+	void setBic(String bic);
 
-	public String getVerwendungszweck() {
-		return verwendungszweck;
-	}
+	String getVerwendungszweck();
 
-	public void setVerwendungszweck(String verwendungszweck) {
-		this.verwendungszweck = verwendungszweck;
-	}
+	void setVerwendungszweck(String verwendungszweck);
 
 }
